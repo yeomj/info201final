@@ -1,7 +1,17 @@
 library('dplyr')
 
-happiness.data <- read.csv("data/happiness.2017.csv", stringsAsFactors = FALSE)
+hap.17 <- read.csv("data/hap.2017.csv", stringsAsFactors = FALSE)
+
+hap.16  <- read.csv("data/hap.2016.csv", stringsAsFactors = FALSE)
+
+hap.15  <- read.csv("data/hap.2015.csv", stringsAsFactors = FALSE)
 
 countries.data <- read.csv("data/countries.csv", stringsAsFactors = FALSE)
 
-full.happiness <- full_join(happiness.data, countries.data)
+two.years <- left_join(hap.17, hap.16)
+
+add.more <- left_join(two.years, hap.15)
+
+full.happiness <- full_join(more.add, countries.data)
+
+View(full.happiness)
