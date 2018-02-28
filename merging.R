@@ -12,6 +12,7 @@ two.years <- left_join(hap.17, hap.16)
 
 add.more <- left_join(two.years, hap.15)
 
-full.happiness <- full_join(more.add, countries.data)
+full.happiness <- full_join(add.more, countries.data)
 
-View(full.happiness)
+full.data <- full.happiness %>% 
+             filter(Happiness.Rank.17 != 'NA')
