@@ -10,9 +10,10 @@ my.ui <- fluidPage(
                   choices = c("Australia and New Zealand", "Central and Eastern Europe", "Eastern Asia",
                               "Latin America and Caribbean", "Middle East and Northern Africa", 
                               "North America", "Southeastern Asia", "Southern Asia", "Sub-Saharan Africa",
-                              "Western Europe"))
+                              "Western Europe", "World"))
     ),
     mainPanel(
+      h1("Graph of Wealth by GDP per Capita and Generosity in Chosen Region and Year"),
       plotOutput('graph')
     )
   )
