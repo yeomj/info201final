@@ -16,3 +16,5 @@ full.happiness <- full_join(add.more, countries.data)
 
 full.data <- full.happiness %>% 
              filter(Happiness.Rank.17 != 'NA')
+
+freedom.corruption <- select(full.data, Country, Freedom.17, Trust..Government.Corruption..17, Happiness.Rank.17, Freedom.16, Trust..Government.Corruption..16, Happiness.Rank.16, Freedom.15, Trust..Government.Corruption..15, Happiness.Rank.15)
