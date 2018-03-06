@@ -22,3 +22,4 @@ wealthy.generosity <- select(full.data, Country, Happiness.Rank.17, Happiness.Sc
                              Happiness.Rank.16, Happiness.Score.16, Economy..GDP.per.Capita..16,
                              Generosity.16, Happiness.Rank.15, Happiness.Score.15,
                              Economy..GDP.per.Capita..15, Generosity.15)
+
