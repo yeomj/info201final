@@ -26,16 +26,22 @@ my.ui<- fluidPage(
     
     mainPanel(
       
-      p("The purple represnts Happiness Score vs Freedom (which we expect to be higher) and 
-        the maroon represent Happiness Score vs Corruption. I did the facet just to see how each 
-        variable was in relation to Happiness Score and it seems as it has the relationship I would 
-        expect since I expect the freedom to be placed higher than corruption."),
+      p("The purple represnts Happiness Score vs. Freedom and 
+        the maroon represent Happiness Score vs. Corruption. A high amount of freedom and trust in government are both two important factors of happiness. 
+        Therefore, we included this facet to see how each 
+        variable was represented in relation to Happiness Score. From the data, it appears that
+        the regions of North America, Western Europe, the Middle East and Northern Africa consider higher
+        levels of freedom and trust in government as important factors in their overall happiness. Other regions 
+        such as Central and Eastern Europe and Sub-Saharan Africa experience lower overall happiness scores and no apparent
+relationship between freedom/corruption and happiness scores. This indicates that there may be more pressing factors at hand
+resulting in the low happiness scores."),
       plotOutput('corruption'),
       
-      p("I just did a area graph to show the relations, if it was in complete correlation it should have a 
-        positive slope be a straight line. It actually is for North America, and Austria/New Zealand region 
-        but some other regions dont which I think you could probably do some analysis as to why that might be. 
-        Hopefully this is helpful! "),
+      p("We included this area graph to show the relationship between the variables of freedom and corruption.  
+        We predicted that countries with higher trust in goverment - low perceived corruption - would experience more freedom.
+        When viewing the data points, it appears that countries with higher perceived levels of corruption
+        factor in freedom more in their overall happiness. From this data, we found that higher trust in government
+        positively correlates with higher freedom, dsiplaying a positive slope in the trend line."),
       plotOutput('plot')
       
 
