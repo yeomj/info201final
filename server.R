@@ -18,19 +18,19 @@ my.server <- function(input, output) {
         geom_jitter(colour = "black") + 
         geom_area(fill = "light blue") + 
         labs( x = "Freedom (2017)",
-               y = "Corruption (2017)")
+               y = "Trust in Government (2017)")
     } else if (input$chosen.year == '2016') {
       g <- ggplot(data = this.data(), aes(x = Freedom.16, y = Trust..Government.Corruption..16))+ 
         geom_jitter(colour = "black") + 
         geom_area(fill = "light blue") + 
         labs( x = "Freedom (2016)",
-               y = "Corruption (2016)")
+               y = "Trust in Government (2016)")
     } else {
       g <- ggplot(data = this.data(), aes(x = Freedom.15, y = Trust..Government.Corruption..15))+ 
         geom_jitter(colour = "black") + 
         geom_area(fill = "light blue") + 
         labs( x = "Freedom (2015)",
-               y = "Corruption (2015)")
+               y = "Trust in Government (2015)")
     }
     
     final.g <- g + 
