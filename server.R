@@ -16,8 +16,7 @@ my.server <- function(input, output) {
       p <- ggplot(data = filter ) +
         geom_smooth(aes(x = filter$Happiness.Score.17, y = filter$Dystopia.Residual.17, color = filter$Happiness.Rank.17)) + 
         geom_jitter(aes(x = filter$Happiness.Score.17, y = filter$Dystopia.Residual.17, color = filter$Happiness.Rank.17), size = 6) + 
-        labs(
-          x = "Happiness Score (2017)", 
+        labs(x = "Happiness Score (2017)", 
           y = "Dystopia Residual (2017)", 
           color = "Happiness Rank (2017)") 
       
@@ -25,16 +24,14 @@ my.server <- function(input, output) {
       p <-  ggplot(data = filter) +
         geom_smooth(aes(x = filter$Happiness.Score.16, y = filter$Dystopia.Residual.16, color = filter$Happiness.Rank.16)) + 
         geom_jitter(aes(x = filter$Happiness.Score.16, y = filter$Dystopia.Residual.16, color = filter$Happiness.Rank.16), size = 6) + 
-        labs(title ="Dystopian Residual in comparison Happiness Score",  
-             x = "Happiness Score (2016)", 
+        labs(x = "Happiness Score (2016)", 
              y = "Dystopia Residual (2016)", 
              color = "Happiness Rank (2016)")
     } else {  # Filters for the chosen year and makes the graph 
       p <- ggplot(data = filter) +
         geom_smooth(aes(x = filter$Happiness.Score.15, y = filter$Dystopia.Residual.15, color = filter$Happiness.Rank.15)) + 
         geom_jitter(aes(x = filter$Happiness.Score.15, y = filter$Dystopia.Residual.15, color = filter$Happiness.Rank.15), size = 6) + 
-        labs(title = 'Dystopian Residual in comparison Happiness Score',  
-             x = "Happiness Score (2015)", 
+        labs(x = "Happiness Score (2015)", 
              y = "Dystopia Residual (2015)", 
              color = "Happiness Rank (2015)") 
     }

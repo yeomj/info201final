@@ -85,7 +85,8 @@ my.ui <- fluidPage (
        cultural differences, we cannot place a single definition and rank each nation. Even though the highest-ranking 
        nation may lead in wealth, life expectancy, freedom and more, this finding was a indication that there must be a 
        different aspect not explored within this data set that led them to believe they were closer to Dystopia than their 
-       neighboring nations. It seems as a further investigation from a sociology perspective might help to resolve some answers."), 
+       neighboring nations. It seems as a further investigation from a sociology perspective might help to resolve some answers.
+       **Note: Some of the regions did not have enough points to create a smooth line."), 
      
       
      plotOutput('plot'),
