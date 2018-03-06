@@ -47,21 +47,24 @@ my.server <- function(input, output) {
         facet_wrap(~Region)+
         geom_point(mapping = aes(x = Happiness.Score.17, y = Trust..Government.Corruption..17, colour = "Corruption"), colour = "maroon") + 
          facet_wrap(~Region)+ 
-        labs(x = "Happiness Score (2017)") 
+        labs(x = "Happiness Score (2017)", 
+             y = "Freedom/Corruption (2017)") 
     } else if (input$chosen.year == '2016') {
       only.corrupt <- ggplot(data = full.data) + 
         geom_point(mapping = aes(x = Happiness.Score.16, y = Freedom.16), colour = 'purple') + 
         facet_wrap(~Region)+
         geom_point(mapping = aes(x = Happiness.Score.16, y = Trust..Government.Corruption..16, colour = "Corruption"), colour = "maroon") + 
         facet_wrap(~Region)+ 
-        labs( x = "Happiness Score (2016)") 
+        labs( x = "Happiness Score (2016)",
+              y = "Freedom/Corruption (2016)") 
     } else {
       only.corrupt <- ggplot(data = full.data) + 
         geom_point(mapping = aes(x = Happiness.Score.15, y = Freedom.15), colour = 'purple') + 
         facet_wrap(~Region)+
         geom_point(mapping = aes(x = Happiness.Score.15, y = Trust..Government.Corruption..15, colour = "Corruption"), colour = "maroon") + 
         facet_wrap(~Region)+ 
-        labs( x = "Happiness Score (2015)") 
+        labs( x = "Happiness Score (2015)",
+              y = "Freedom/Corruption (2015)") 
       
     }
     
