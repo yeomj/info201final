@@ -7,9 +7,9 @@ library("shiny")
 
 my.ui <- fluidPage (
   
-  titlePanel("World Happiness Ranking"),
-  h1("Group Project - INFO 201"), 
-  h2("Jeongvin, Tanya, Madison"),
+  h1("World Happiness Ranking"),
+  h4("Jeongvin, Tanya, Madison"),
+  h5("Group Project - INFO 201"), 
   strong("Introduction to data - "),
   p("Our group utilized a data set called 'World Happiness Report' which is gathered by
      Gallup World Poll to create an evaluation on the ranking of each nations happiness. 
@@ -27,7 +27,7 @@ my.ui <- fluidPage (
     average taken from the different variable provided and calculated to show how close a nation is 
     in Dystopia."),
   wellPanel(
-    helpText(   a("Click Here to go to Data Set",href="https://www.kaggle.com/unsdsn/world-happiness", target = "blank")
+    helpText(a("Click Here to go to Data Set",href="https://www.kaggle.com/unsdsn/world-happiness", target = "blank")
     )
   ),
   
@@ -49,7 +49,7 @@ my.ui <- fluidPage (
     mainPanel(
       tabsetPanel(
         
-        tabPanel("World Happiness Analysis",
+        tabPanel("Dystopia and Happiness Ranking",
       p("For our investigation, we analyzed whether there was a correlation between regions that have a higher happiness 
       rank, and whether those regions would rate themselves the with the highest dystopia residual. The dystopia 
 variable represents an imaginary country with the world's least-happy people, so the residuals serve as a benchmark 
@@ -105,6 +105,8 @@ against real countries. As a group, we created some assumptions that guided our 
   ), 
     
     tabPanel( "Correlation between Freedom and Corruption", 
+              
+              strong("Is there a strong correlation between Freedom and Corruption?"),
               p("The purple dots on this visualization represnt Happiness Score vs. Freedom and 
         the maroon dots represent Happiness Score vs. Corruption. A high amount of freedom and trust in government are both two important factors of determining happiness. 
                 Therefore, we included this facet to see how each 
@@ -114,7 +116,7 @@ against real countries. As a group, we created some assumptions that guided our 
                 such as Central and Eastern Europe and Sub-Saharan Africa experience lower overall happiness scores and no apparent
                 relationship between freedom/corruption and happiness scores. This indicates that there may be more pressing factors at hand
                 resulting in the low happiness scores."),
-              plotOutput('corruption'),
+              plotOutput('facet'),
               
               p("We included this area graph to show the relationship between the variables of freedom and corruption.  
                 We predicted that countries with higher trust in goverment - low perceived corruption - would experience more freedom.
@@ -124,11 +126,10 @@ against real countries. As a group, we created some assumptions that guided our 
                 trust in government are both important factors in a country's overall happiness, this correlation makes sense. 
                 However, in some regions (such as the Southeastern Asia region) the correlation is weaker, indicating that in some countries,
                 more freedom does not necessarily translate to a more trusted government"),
-              plotOutput('facet')
+              plotOutput('corruption')
     ), 
   
       tabPanel("Correlation between Wealth and Generosity", 
-               h1("Do wealthier countries have higher levels of generosity?"),
                p("For our first analysis, we decided to examine whether there was any correlation between a country's
          wealth - measured by its Gross Domestic Product (GDP) per Capita - and its generosity, which
         is meaured by their total spending on social welfare. We looked to see if different regions,
@@ -151,9 +152,9 @@ against real countries. As a group, we created some assumptions that guided our 
         our data cannot come to a decisive solution, as we have limited data and cannot find a very strong
         correlation between these two factors, generosity and wealth. More research would need to be done
         on the topic to come to a conclusion."),
-               h2("Graph of Wealth by GDP per Capita and Generosity in Chosen Region and Year"),
-               plotOutput('graph2')
-        
+        plotOutput('region'), 
+        p("Explanation for rank"), 
+        plotOutput('rank')
         
       )
       
