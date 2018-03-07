@@ -16,13 +16,9 @@ full.happiness <- full_join(add.more, countries.data)
 
 full.data <- full.happiness %>% 
              filter(Happiness.Rank.17 != 'NA')
-<<<<<<< HEAD
-=======
 
 wealthy.generosity <- select(full.data, Country, Happiness.Rank.17, Happiness.Score.17,
                              Economy..GDP.per.Capita..17, Generosity.17, Region,
                              Happiness.Rank.16, Happiness.Score.16, Economy..GDP.per.Capita..16,
                              Generosity.16, Happiness.Rank.15, Happiness.Score.15,
                              Economy..GDP.per.Capita..15, Generosity.15)
-
->>>>>>> aeb8c654fcc4ea8c215fd9c2f7fb96752ce09e29

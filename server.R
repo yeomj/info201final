@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 library("dplyr")
 library("ggplot2")
 library("shiny")
@@ -162,27 +162,21 @@ my.server <- function(input, output) {
     return(final.only.corrupt)
   })
 
-}
-=======
-library(shiny)
-library(ggplot2)
-library('dplyr')
-source('merging.R')
-
-my.server <- function(input, output){
-  output$graph <- renderPlot ({
-    if(input$region == "World") {
+# THIRD TAB 
+  output$graph2 <- renderPlot ({
+    
+    if(input$chosen.category == "World") {
       wealthy.generosity1 <- wealthy.generosity
     } else {
-      wealthy.generosity1 <- filter(wealthy.generosity, Region == input$region)
+      wealthy.generosity1 <- filter(wealthy.generosity, Region == input$chosen.category)
     }
-    if(input$chosen.year == "15") {
+    if(input$chosen.year == "2015") {
       wg.plot <- ggplot(data = wealthy.generosity1, mapping = aes(x = "Economy..GDP.per.Capita..15",
                                                                  y = "Generosity.15")) +
         geom_jitter() + 
         xlab("Wealth (GDP per Capita)") + 
         ylab("Generosity")
-    } else if(input$chosen.year == "16") {
+    } else if(input$chosen.year == "2016") {
       wg.plot <- ggplot(data = wealthy.generosity1, aes(x = "Economy..GDP.per.Capita..16",
                                                        y = "Generosity.16")) +
         geom_jitter() + 
@@ -199,5 +193,4 @@ my.server <- function(input, output){
   })
 }
 
-shinyServer(my.server)
->>>>>>> aeb8c654fcc4ea8c215fd9c2f7fb96752ce09e29
+

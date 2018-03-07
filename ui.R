@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 library("dplyr")
 library("ggplot2")
 library("shiny")
@@ -41,7 +41,7 @@ my.ui <- fluidPage (
                                                                               "North America","Australia and New Zealand", 
                                                                               "Middle East and Northern Africa", 
                                                                               "Latin America and Caribbean",
-                                                                              "Central and Eastern Europe"))
+                                                                              "Central and Eastern Europe", "World"))
 
              
     ),
@@ -121,33 +121,11 @@ my.ui <- fluidPage (
                 factor in freedom more in their overall happiness. From this data, we found that higher trust in government
                 positively correlates with higher freedom, dsiplaying a positive slope in the trend line."),
               plotOutput('facet')
-    )
-      
-      
-    )
-      
-    )
-  )
+    ), 
   
-) 
-=======
-library(shiny)
-source('merging.R')
-
-my.ui <- fluidPage(
-  sidebarLayout(
-    sidebarPanel(
-      radioButtons("chosen.year", label = "Select Year for World Happiness Report", 
-                   choices = c("15", "16", "17")),
-      selectInput("region", label = "Select Region to View", 
-                  choices = c("Australia and New Zealand", "Central and Eastern Europe", "Eastern Asia",
-                              "Latin America and Caribbean", "Middle East and Northern Africa", 
-                              "North America", "Southeastern Asia", "Southern Asia", "Sub-Saharan Africa",
-                              "Western Europe", "World"))
-    ),
-    mainPanel(
-      h1("Do wealthier countries have higher levels of generosity?"),
-      p("For our first analysis, we decided to see if there was any correlation between a country's
+      tabPanel("Correlation between Wealth and Generosity", 
+               h1("Do wealthier countries have higher levels of generosity?"),
+               p("For our first analysis, we decided to see if there was any correlation between a country's
          wealth, measured by its Gross Domestic Product (GDP) per Capita, and its generosity, which
         is meaured by their total spending on social welfare. We wanted to see if different regions,
         which often share some cultural and economic qualities, would have some correlation between
@@ -155,8 +133,8 @@ my.ui <- fluidPage(
         only studying data from three years, however, any correlation we would find would be rather
         weak, and we would need to explore data from a larger number of years to find any trends or
         a stronger correlation between these factors."),
-      strong("Is there any correlation between wealth and generosity?"),
-      p("Below, you will find a dot plot comparing wealth to generosity, separated by region. When
+               strong("Is there any correlation between wealth and generosity?"),
+               p("Below, you will find a dot plot comparing wealth to generosity, separated by region. When
         studying correlation, we ignored the graphs from Australia & New Zealand, Eastern Asia, and
         North America because there were not enough countries in each region to truly find any correlation
         between these values. As for the other regions, we could not find much correlation between
@@ -169,11 +147,18 @@ my.ui <- fluidPage(
         our data cannot come to a decisive solution, as we have limited data and cannot find a very strong
         correlation between these two factors, generosity and wealth. More research would need to be done
         on the topic to come to a conclusion."),
-      h2("Graph of Wealth by GDP per Capita and Generosity in Chosen Region and Year"),
-      plotOutput('graph')
+               h2("Graph of Wealth by GDP per Capita and Generosity in Chosen Region and Year"),
+               plotOutput('graph2')
+        
+        
+      )
+      
+      
+    )
+      
     )
   )
-)
+  
+) 
 
-shinyUI(my.ui)
->>>>>>> aeb8c654fcc4ea8c215fd9c2f7fb96752ce09e29
+   
