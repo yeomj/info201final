@@ -3,7 +3,6 @@ library("ggplot2")
 library("shiny")
 
 source('merging.R')
-<<<<<<< HEAD
 
 my.server <- function(input, output) {
   
@@ -93,9 +92,7 @@ my.server <- function(input, output) {
     return(selected()) # prints the text as a text box 
   })
   
-=======
-my.server <- function(input, output) {
-  
+# SECOND TAB 
   this.data <- reactive({
     # Filters the data for only regions 
     filtered <- full.data %>% 
@@ -103,7 +100,7 @@ my.server <- function(input, output) {
   })
 
   
-  output$plot <- renderPlot({
+  output$facet <- renderPlot({
     if(input$chosen.year =='2017') {
       g <- ggplot(data = this.data(), aes(x = Freedom.17, y = Trust..Government.Corruption..17))+ 
         geom_jitter(colour = "black") + 
@@ -156,7 +153,6 @@ my.server <- function(input, output) {
         facet_wrap(~Region)+ 
         labs( x = "Happiness Score (2015)",
               y = "Freedom/Corruption (2015)") 
-      
     }
     
     final.only.corrupt <- only.corrupt + 
@@ -165,5 +161,4 @@ my.server <- function(input, output) {
     return(final.only.corrupt)
   })
 
->>>>>>> 8ff174aac44ee2cb63959225ba6ce7c2f534c011
 }
