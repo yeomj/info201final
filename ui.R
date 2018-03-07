@@ -138,22 +138,25 @@ against real countries. As a group, we created some assumptions that guided our 
         only studied data from three years, any correlation we found would be on the weaker
         side. We would need to explore data from a larger number of years to find any trends or
         a stronger correlation between these factors."),
-               strong("Is there any correlation between wealth and generosity?"),
+               strong("Does the correlation between wealth and geneorsity differ between region?"),
                p("Below, you will find a dot plot comparing wealth to generosity, separated by region. When
         studying correlation, we ignored the graphs from Australia & New Zealand, Eastern Asia, and
         North America because there were not enough countries in each region to truly find any correlation
         between these values. As for the other regions, we could not find much correlation between
         wealth and generosity. In four of the regions (Latin America & the Caribbean, Middle East and
-        North Africa, Southeastern Asia, and Western Europe), we could find no evidence of correlation
-        between wealth and generosity in any of the three years. In Central & Eastern Europe and Sub-Saharan
-        Africa, we found a slight negative correlation, meaning that as wealth increased, generosity 
+        North Africa, Southern Asia, and Sub-Saharan Africa), we could find no evidence of correlation
+        between wealth and generosity in any of the three years. In Central & Eastern Europe and Southeastern
+        Asia, we found a slight negative correlation, meaning that as wealth increased, generosity 
         decreased, which was the opposite of our expected result. The only region with a slight positive
-        correlation was Southern Asia, which includes the countries of the Indian Sub-Continent. Overall,
-        our data cannot come to a decisive solution, as we have limited data and cannot find a very strong
-        correlation between these two factors, generosity and wealth. More research would need to be done
-        on the topic to come to a conclusion."),
+        correlation was Western Europe, which includes many socialist countries, which have many social welfare
+        programs and tend to be wealthier than most other nations."),
         plotOutput('region'), 
-        p("Explanation for rank"), 
+        strong("Is there any correlation between wealth and genorsity?"),
+        p("As you can see in the below graph, it would be hard to make general, overall assumptions about a correlation.
+        There is some evidence in all three years that once a country gets fairly wealthy, it gets decisively more generous
+        and gets a higher rank in the Happiness Index. Overall, our data cannot come to a decisive solution, as we have 
+        limited data and cannot find a very strong correlation between these two factors, generosity and wealth. 
+        More research would need to be done on the topic to come to a conclusion."), 
         plotOutput('rank')
         
       )
